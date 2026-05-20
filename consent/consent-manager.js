@@ -705,6 +705,7 @@ class ConsentManager {
       <footer>
         ${saveButton}
         ${rejectNonEssentialButton}
+        ${this.config.policyUrl ? `<a class="cm-policy-link" href="${this.config.policyUrl}" target="_blank" rel="noreferrer">${this.config.text?.preferences?.policyLinkText || 'Privacy policy'}</a>` : ''}        
       </footer>
     `;
   }

@@ -423,6 +423,17 @@ Modal - Footer
   margin-top: 24px;
 }
 
+#cm-modal footer a.cm-policy-link {
+  margin-left: auto;
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#cm-modal footer a.cm-policy-link:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 600px) {
   #cm-modal footer {
     flex-direction: row;
