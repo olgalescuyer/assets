@@ -451,8 +451,8 @@ Cookie Icon
   left: 10px;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   padding: 0px;
   border: none;
@@ -461,6 +461,7 @@ Cookie Icon
   box-shadow: 0px 0px 6px 0px #0000001a;
   pointer-events: auto;
   animation: cm-fade-in 0.3s ease-in-out forwards;
+  padding: 4px;
 }
 
 #cm-icon.cm-pos-bottom-right {
