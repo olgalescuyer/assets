@@ -3,7 +3,7 @@
 -------------------------------- */
 #cm-wrapper {
   --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
-  --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
+  --fontFamily: var(--_typography---font--primary-family);
   --primaryColor: #f5f0e9;
   --backgroundColor: #232323;
   --textColor: #f4f0df;
@@ -451,8 +451,8 @@ Cookie Icon
   left: var(--site--margin);
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   padding: 0.5rem;
   border: none;
