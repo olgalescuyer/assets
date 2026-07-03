@@ -4,13 +4,13 @@
 #cm-wrapper {
   --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
   --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
-  --primaryColor: #f9d000;
+  --primaryColor: #fffaf3;
   --backgroundColor: #050505;
   --textColor: #f4f0df;
   --backdropBackgroundColor: #00000077;
   --backdropBackgroundBlur: 0px;
-  --iconColor: #050505;
-  --iconBackgroundColor: #f9d000;
+  --iconColor: #232323;
+  --iconBackgroundColor: #fffaf3;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -451,8 +451,8 @@ Cookie Icon
   left: 10px;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.75rem;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   padding: 0px;
   border: none;
