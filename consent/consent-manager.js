@@ -209,7 +209,6 @@ class ConsentManager {
   createWrapper() {
     this.wrapper = document.createElement('div');
     this.wrapper.id = 'cm-wrapper';
-    this.wrapper.setAttribute('data-cm-wrap', '');
     document.body.insertBefore(this.wrapper, document.body.firstChild);
   }
 
