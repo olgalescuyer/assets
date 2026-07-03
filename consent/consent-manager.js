@@ -12,6 +12,7 @@ class ConsentManager {
     this.prompt = null;
     this.preferences = null;
     this.icon = null;
+    this.iconContainer = null;
     this.backdrop = null;
     this.localStorageAvailable = this._checkLocalStorageAvailable();
     this._needsReload = false;
@@ -104,6 +105,7 @@ class ConsentManager {
     this.prompt = null;
     this.preferences = null;
     this.icon = null;
+    this.iconContainer = null;
     this.backdrop = null;
   }
 
@@ -753,6 +755,9 @@ class ConsentManager {
   }
 
   createCookieIcon() {
+    this.iconContainer = document.createElement('div');
+    this.iconContainer.id = 'cm-icon-container';
+
     this.icon = document.createElement('button');
     this.icon.id = 'cm-icon';
     this.icon.title = 'Manage your consent preferences for this site';
@@ -765,16 +770,17 @@ class ConsentManager {
 
     if (!this.wrapper || !document.body.contains(this.wrapper))
       this.createWrapper();
-    this.wrapper.appendChild(this.icon);
+    this.iconContainer.appendChild(this.icon);
+    this.wrapper.appendChild(this.iconContainer);
 
-    if (this.icon && this.config.icon?.position) {
+    if (this.iconContainer && this.config.icon?.position) {
       const positionMap = {
         bottomRight: 'cm-pos-bottom-right',
         bottomLeft: 'cm-pos-bottom-left',
       };
       const mappedPosition =
         positionMap[this.config.icon.position] || this.config.icon.position;
-      this.icon.classList.add(mappedPosition);
+      this.iconContainer.classList.add(mappedPosition);
     }
 
     if (this.icon && this.config.icon?.colorScheme) {
@@ -783,11 +789,11 @@ class ConsentManager {
   }
 
   showCookieIcon() {
-    if (this.icon) this.icon.style.display = 'flex';
+    if (this.iconContainer) this.iconContainer.style.display = 'flex';
   }
 
   hideCookieIcon() {
-    if (this.icon) this.icon.style.display = 'none';
+    if (this.iconContainer) this.iconContainer.style.display = 'none';
   }
 
   handleDefaultConsent() {
