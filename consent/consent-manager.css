@@ -4,13 +4,13 @@
 #cm-wrapper {
   --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
   --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
-  --primaryColor: #fffaf3;
+  --primaryColor: #f9d000;
   --backgroundColor: #050505;
   --textColor: #f4f0df;
   --backdropBackgroundColor: #00000077;
   --backdropBackgroundBlur: 0px;
-  --iconColor: #232323;
-  --iconBackgroundColor: #fffaf3;
+  --iconColor: #050505;
+  --iconBackgroundColor: #f9d000;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -444,36 +444,29 @@ Modal - Footer
 /* --------------------------------
 Cookie Icon
 -------------------------------- */
-#cm-icon-container {
-  width: calc(100% - var(--nav--spacing-outer-horizontal, 24px) * 2);
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+#cm-icon {
   display: none;
   position: fixed;
-  inset: auto 0% 2rem;
-  pointer-events: none;
-}
-
-#cm-icon-container.cm-pos-bottom-left {
-  justify-content: flex-start;
-}
-
-#cm-icon {
-  display: flex;
+  bottom: 10px;
+  left: 10px;
   justify-content: center;
   align-items: center;
-  width: 2.75rem;
-  aspect-ratio: 1 / 1;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0px;
   border: none;
   background-color: var(--iconColor);
   cursor: pointer;
   box-shadow: 0px 0px 6px 0px #0000001a;
   pointer-events: auto;
   animation: cm-fade-in 0.3s ease-in-out forwards;
+  padding: 4px;
+}
+
+#cm-icon.cm-pos-bottom-right {
+  left: auto;
+  right: 10px;
 }
 
 #cm-icon svg {
