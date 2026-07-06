@@ -15,6 +15,7 @@ class ConsentManager {
     this.backdrop = null;
     this.localStorageAvailable = this._checkLocalStorageAvailable();
     this._needsReload = false;
+    this._scrollY = 0;
 
     this.createWrapper();
 
@@ -958,15 +959,19 @@ class ConsentManager {
   }
 
   preventBodyScroll() {
+    this._scrollY = window.scrollY;
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
+    document.body.style.top = `-${this._scrollY}px`;
     document.body.style.width = '100%';
   }
 
   allowBodyScroll() {
     document.body.style.overflow = '';
     document.body.style.position = '';
+    document.body.style.top = '';
     document.body.style.width = '';
+    window.scrollTo(0, this._scrollY || 0);
   }
 }
 
